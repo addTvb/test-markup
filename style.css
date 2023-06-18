@@ -193,6 +193,10 @@ body {
     align-items: center;
 }
 
+.header .mobile-controls {
+    display: none;
+}
+
 .header-theme {
     width: 40px;
     height: 40px;
@@ -622,6 +626,11 @@ button.add-rate {
     .header-sign-in {
         padding: 10px 17px;
     }
+
+    .header .mobile-controls {
+        display: flex;
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width: 1300px) {
@@ -679,10 +688,7 @@ button.add-rate {
         display: block;
     }
 
-    .header .mobile-controls {
-        display: flex;
-        gap: 10px;
-    }
+
 
     .mobile-sign-in {
         border: 1px solid var(--accent-text-color);

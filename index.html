@@ -3,29 +3,321 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style.css">
-        <title>ExSun</title>
+		<link rel="stylesheet" href="./style.css" />
+        <script src="./script.js" defer async></script>
+		<title>ExSun</title>
 	</head>
-	<body>
+	<body data-theme="light">
 		<section class="left-side">left-side</section>
 		<div class="center">
 			<header class="header">
+                <img src="./img/ex-sun.svg" alt="ExSun logo" class="header-logo">
 				<nav>
-					<a href="#" class="header-link">Мониторинг</a>
-					<a href="" class="header-link">Обменные пункты</a>
-					<a href="" class="header-link">Партнерам</a>
-					<a href="" class="header-link">Помощь</a>
-					<a href="" class="header-link">О нас</a>
+					<a href="#" class="header-link active">Мониторинг</a>
+					<span class="dot"></span>
+					<a href="#" class="header-link">Обменные пункты</a>
+					<span class="dot"></span>
+					<a href="#" class="header-link">Партнерам</a>
+					<span class="dot"></span>
+					<a href="#" class="header-link">Помощь</a>
+					<span class="dot"></span>
+					<a href="#" class="header-link">О нас</a>
 				</nav>
 				<div class="header-controls">
-					<span class="header-theme">Theme</span>
+					<button class="btn header-theme" id="theme-toggle">🌝</button>
 					<span class="header-lang">RU</span>
-					<button class="header-sign-in">Авторизация</button>
+					<button class="btn outline header-sign-in">Авторизация</button>
 				</div>
-			</header>
+                <div class="mobile-controls">
+					<button class="btn mobile-sign-in">Войти</button>
+                    <img src="./img/burger-menu.svg" alt="" class="burger-menu">
+                </div>
+            </header>
 			<main class="content">
-				<div class="content-top">TOP</div>
-				<div class="content-bottom">Bottom</div>
+				<div class="content-top">
+					<div class="info-card">
+						<img src="./img/logo.jpg" alt="Crypocto logo" />
+						<div class="info">
+							<div class="row">
+								<span class="key">Статус</span>
+								<span class="underline"></span>
+								<span class="value green">Работает</span>
+							</div>
+							<div class="row">
+								<span class="key">Возраст</span>
+								<span class="underline"></span>
+								<span class="value">2 г 11 м</span>
+							</div>
+							<div class="row">
+								<span class="key">В мониторинге</span>
+								<span class="underline"></span>
+								<span class="value">1 месяц</span>
+							</div>
+							<div class="row">
+								<span class="key">Страна</span>
+								<span class="underline"></span>
+								<span class="value"
+									>Казахстан
+									<img src="./img/KZ-flag.jpg" alt="Kazakhstan flag"
+								/></span>
+							</div>
+							<div class="row">
+								<span class="key">Кэшбек</span>
+								<span class="underline"></span>
+								<span class="value">35%</span>
+							</div>
+							<div class="row">
+								<span class="key">Отзывы</span>
+								<span class="underline"></span>
+								<span class="value">1000</span>
+							</div>
+							<div class="row">
+								<span class="key">Рейтинг</span>
+								<span class="underline"></span>
+								<span class="value green">4.4</span>
+							</div>
+							<div class="row">
+								<span class="key">Резервы</span>
+								<span class="underline"></span>
+								<span class="value">100 000 000$</span>
+							</div>
+							<div class="row">
+								<span class="key">Кол-во направлений</span>
+								<span class="underline"></span>
+								<span class="value">18</span>
+							</div>
+							<div class="row">
+								<span class="key">Выполнено обменов</span>
+								<span class="underline"></span>
+								<span class="value">&#x3C;100</span>
+							</div>
+						</div>
+						<button class="btn filled to-exchanger">
+							Перейти в обменник
+						</button>
+					</div>
+					<div class="stat-card">
+						<div class="stat">
+							<div class="row blue">
+								<div class="text-wrapper">
+									<span class="title"
+										>Потребовалась верификации личности</span
+									>
+									<span class="value">35%</span>
+								</div>
+								<div class="progress">
+									<div data-progress="35" class="bar"></div>
+								</div>
+							</div>
+							<div class="row green">
+								<div class="text-wrapper">
+									<span class="title"
+										>Проходили дополнительную проверку AML</span
+									>
+									<span class="value">5%</span>
+								</div>
+								<div class="progress">
+									<div data-progress="5" class="bar"></div>
+								</div>
+							</div>
+							<div class="row red">
+								<div class="text-wrapper">
+									<span class="title"
+										>Оценили работу тех.поддержки на отлично</span
+									>
+									<span class="value">80%</span>
+								</div>
+								<div class="progress">
+									<div data-progress="80" class="bar"></div>
+								</div>
+							</div>
+							<div class="row cyan">
+								<div class="text-wrapper">
+									<span class="title"
+										>От оплаты заявки до выплаты прошло не больше 10
+										минут</span
+									>
+									<span class="value">70%</span>
+								</div>
+								<div class="progress">
+									<div data-progress="70" class="bar"></div>
+								</div>
+							</div>
+							<div class="row yellow">
+								<div class="text-wrapper">
+									<span class="title"
+										>Полученная сумма соответствовала сумме, указанной
+										к выплате</span
+									>
+									<span class="value">90%</span>
+								</div>
+								<div class="progress">
+									<div data-progress="90" class="bar"></div>
+								</div>
+							</div>
+							<div class="row blue">
+								<div class="text-wrapper">
+									<span class="title"
+										>Использованный в расчёте курс на момент выплаты
+										отличался от заявленного</span
+									>
+									<span class="value">10%</span>
+								</div>
+								<div class="progress">
+									<div data-progress="10" class="bar"></div>
+								</div>
+							</div>
+						</div>
+						<div class="btn-wrapper">
+							<button class="btn outline">Из 100 последних</button>
+							<button class="btn filled">Все отзывы</button>
+						</div>
+					</div>
+				</div>
+				<div class="content-bottom">
+					<div class="tabs">
+						<button>
+							<img src="./img/icon.svg" alt="" /> <span>Описание</span>
+						</button>
+						<button class="active">
+							<img src="./img/icon (1).svg" alt="" /> <span>Отзывы</span>
+						</button>
+						<button>
+							<img src="./img/icon (2).svg" alt="" /> <span>Рейтинг</span>
+						</button>
+						<button>
+							<img src="./img/icon (3).svg" alt="" /> <span>Претензии</span>
+						</button>
+						<button>
+							<img src="./img/icon (4).svg" alt="" />
+							<span>Сообщить о нарушениях</span>
+						</button>
+					</div>
+					<div class="rates">
+						<div class="rates-title">Оценка:</div>
+						<div class="rates-controls">
+							<div class="select">Все <span>&#9660;</span></div>
+							<button class="btn outline add-rate">Добавить отзыв</button>
+						</div>
+						<hr />
+						<div class="rates-pagination">
+							<div class="rates-count">
+								<span>Кол-во на странице: </span>
+								<input type="text" name="" value="5" maxlength="6" inputmode="numeric" />
+							</div>
+							<div class="rates-page-btns">
+								<button class="btn outline arrow">&#8592;</button>
+
+								<button class="btn page-btn filled">1</button>
+								<button class="btn page-btn">2</button>
+								<button class="btn page-btn">3</button>
+								<button class="btn page-btn">...</button>
+								<button class="btn page-btn">12</button>
+
+								<button class="btn outline arrow">&#8594;</button>
+							</div>
+						</div>
+						<div class="rates-answers">
+							<div class="answer green">
+								<div class="answer-author-wrapper">
+									<span class="answer-author">Henry Woods</span>
+									<span class="answer-date">08.03.2022 12:00</span>
+								</div>
+
+								<div class="answer-text">
+									Сайт рыбатекст поможет дизайнеру, верстальщику,
+									вебмастеру сгенерировать несколько абзацев более менее
+									осмысленного текста рыбы на русском языке, а на...
+								</div>
+
+								<div class="answer-rate">
+									<img src="./img/rating.svg" alt="Rating stars" class="answer-stars"></img>
+									<button class="read-more">Читать ещё</button>
+								</div>
+							</div>
+
+                            <div class="answer green">
+								<div class="answer-author-wrapper">
+									<span class="answer-author">Stephanie Stewart</span>
+									<span class="answer-date">08.03.2022 11:57</span>
+								</div>
+
+								<div class="answer-text">
+									При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предло...
+								</div>
+
+								<div class="answer-rate">
+									<img src="./img/rating.svg" alt="Rating stars" class="answer-stars"></img>
+									<button class="read-more">Читать ещё</button>
+								</div>
+							</div>
+
+                            <div class="answer sub">
+								<div class="answer-author-wrapper">
+									<span class="answer-author">Обменный пункт</span>
+									<span class="answer-date">08.03.2022 12:57</span>
+								</div>
+
+								<div class="answer-text">
+									Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке 
+								</div>
+
+								
+							</div>
+
+
+                            <div class="answer green">
+								<div class="answer-author-wrapper">
+									<span class="answer-author">Carla Johnston</span>
+									<span class="answer-date">08.03.2022 11:57</span>
+								</div>
+
+								<div class="answer-text">
+									Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних.
+								</div>
+
+								<div class="answer-rate">
+									<img src="./img/rating.svg" alt="Rating stars" class="answer-stars"></img>
+									<button class="read-more">Читать ещё</button>
+								</div>
+							</div>
+
+                            <div class="answer red">
+								<div class="answer-author-wrapper">
+									<span class="answer-author">Geraldine Jimenez</span>
+									<span class="answer-date">08.03.2022 11:57</span>
+								</div>
+
+								<div class="answer-text">
+									Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+								</div>
+
+								<div class="answer-rate">
+									<img src="./img/rating.svg" alt="Rating stars" class="answer-stars"></img>
+									<button class="read-more">Читать ещё</button>
+								</div>
+							</div>
+
+                            <div class="answer green">
+								<div class="answer-author-wrapper">
+									<span class="answer-author">Henry Woods</span>
+									<span class="answer-date">08.03.2022 12:00</span>
+								</div>
+
+								<div class="answer-text">
+									Сайт рыбатекст поможет дизайнеру, верстальщику,
+									вебмастеру сгенерировать несколько абзацев более менее
+									осмысленного текста рыбы на русском языке, а на...
+								</div>
+
+								<div class="answer-rate">
+									<img src="./img/rating.svg" alt="Rating stars" class="answer-stars"></img>
+									<button class="read-more">Читать ещё</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</main>
 		</div>
 		<section class="right-side">right-side</section>
